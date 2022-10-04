@@ -13,6 +13,7 @@ const AddEntryPost = (props) => {
             post: post
         };
         console.log(newEntryPost);
+        props.addNewEntryProperty(newEntryPost)
     }
 
     
