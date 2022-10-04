@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
+import AddEntryPost from './Components/AddEntry/AddEntryPost';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <h3 style={{margin: '1em'}}>Social
       <small className= 'text-muted'>Feed</small></h3>
       <div>
+        <AddEntryPost />
         <DisplayEntries parentEntries = {entries}/>   
       </div>
     </div>
