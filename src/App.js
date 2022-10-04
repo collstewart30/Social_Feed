@@ -1,24 +1,18 @@
 import React, { useState } from 'react';
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 
 
 function App() {
 
-  const [entries, setEntries] = useState([{name: 'Colleen Stewart', post: 'This is my first post!'}])
+  const [entries, setEntries] = useState([{name: 'Colleen Stewart', post: 'This is my second post!'}])
 
   return (
     <div className="App">
       <h3 style={{margin: '1em'}}>Social
       <small className= 'text-muted'>Feed</small></h3>
-        <table>
-          <tbody>
-            <tr>
-              <td>colleen</td>
-            </tr>
-            <tr>
-              <td>first post</td>
-            </tr>
-          </tbody>
-        </table>
+      <div>
+        <DisplayEntries parentEntries = {entries}/>   
+      </div>
     </div>
   );
 }
