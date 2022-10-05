@@ -12,22 +12,23 @@ const AddEntryPost = (props) => {
             name: name,
             post: post
         };
-        console.log(newEntryPost);
         props.addNewEntryProperty(newEntryPost);
     }
 
     
     return ( 
         <form onSubmit={handleSubmit}>
-            <div className='form-group'>
+            <div className='form-group form-inline'>
                 <label>Name</label>
                 <input type = 'text' value={name} className='form-control' onChange={(event) => setName(event.target.value)}/>
             </div>
-            <div className='form-group'>
-                <label>Post</label>
-                <input type = 'text' value={post} className='form-control' onChange={(event) => setPost(event.target.value)}/>
+            <div className='form-group form-inline'>
+                <label style={{'margin-top': '1em'}}>Post</label>
+                <input type = 'text' value={post} className='form-control' style={{'height': '100px'}} onChange={(event) => setPost(event.target.value)}/>
             </div>
-            <button type='submit' className='btn btn-primary' style={{'margin-top': '1em'}}>Create</button>
+            <div className='form-group align-right'>
+                <button type='submit' style={{'margin-top': '1em'}}>Create</button>
+            </div>
         </form>
      );
 }
