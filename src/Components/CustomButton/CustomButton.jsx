@@ -29,8 +29,8 @@ const CustomButton = (props) => {
     }
         return (
             <div>
-                <button className={likeButtonClass} onClick={handleClickLike}>{props.messageOne}</button>
-                <button className={dislikeButtonClass} onClick={handleClickDislike}>{props.messageTwo}</button>
+                <button className={likeButtonClass} onClick={handleClickLike} style={{'margin': '.5em'}} color='red'>{props.messageOne}</button>
+                <button className={dislikeButtonClass} onClick={handleClickDislike} style={{'margin': '.5em'}}>{props.messageTwo}</button>
             </div>
         )
 }

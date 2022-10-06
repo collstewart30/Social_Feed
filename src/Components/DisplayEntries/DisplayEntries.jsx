@@ -6,32 +6,25 @@ const DisplayEntries = (props) => {
 
     return (     
       <div>
-       {/* <table className='table'> */}
-          {/* <tbody> */}
-            {props.parentEntries.map((entry) => {
-              return (
-                <table className='table' >
-                <tbody>
+        {props.parentEntries.map((entry) => {
+          return (
+            <table className='table' >
+              <tbody>
                 <div>
-                  <tr>
+                  <tr className='row'>
                     <td>{entry.name}</td>
                   </tr>
                   <tr>
                     <td>{entry.post}</td>
                     <CustomButton messageOne='Like' messageTwo="Dislike"/>
-                  </tr>
-                    
+                  </tr>                    
                 </div>
-                </tbody>
-                <hr></hr>
-                </table>
-                
-              );
-            })}
-          {/* </tbody> */}
-        {/* </table>   */}
-      </div>  
-      
+              </tbody>
+              <hr></hr>
+            </table>                
+          );
+        })}
+      </div>        
     );
 }
  

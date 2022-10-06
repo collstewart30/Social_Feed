@@ -26,7 +26,7 @@ const AddEntryPost = (props) => {
                 <label style={{'margin-top': '1em'}}>Post</label>
                 <input type = 'text' value={post} className='form-control' style={{'height': '100px'}} onChange={(event) => setPost(event.target.value)}/>
             </div>
-            <div className='form-group align-right'>
+            <div>
                 <button type='submit' style={{'margin-top': '1em'}}>Create</button>
             </div>
         </form>
